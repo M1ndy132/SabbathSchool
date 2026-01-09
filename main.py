@@ -1,5 +1,6 @@
 from models import Class_Entry, Division, SabbathSchoolClass
 from datetime import date
+from calculations import calculate_division_totals, calculate_church_totals
 
 UpperDivision = Division("Upper Division")
 LowerDivision = Division("Lower Division")
@@ -20,7 +21,7 @@ for cls in UpperDivision.classes:
         class_name =cls.class_name,
         attendance = 8,
         study=5,
-        vistors=1,
+        visitors=1,
         offering=1000.0
     )
     cls.entries.append(entry)
@@ -32,7 +33,10 @@ for cls in LowerDivision.classes:
         class_name=cls.class_name,
         attendance=14,
         study=10,
-        vistors=5,
+        visitors=5,
         offering=500.0
     )
     cls.entries.append(entry)
+
+
+calculate_church_totals(UpperDivision, LowerDivision, Sabbath_Date)
