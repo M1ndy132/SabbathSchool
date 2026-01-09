@@ -1,10 +1,10 @@
 class Class_Entry:
-    def __init__(self, date, class_name, attendance = 0, study = 0, vistors = 0, offering = 0.0) -> None:
+    def __init__(self, date, class_name, attendance = 0, study = 0, visitors = 0, offering = 0.0) -> None:
         self.date = date
         self.class_name = class_name
         self.attendance = attendance
         self.study = study
-        self.vistors = vistors
+        self.visitors = visitors
         self.offering = offering
 
 
